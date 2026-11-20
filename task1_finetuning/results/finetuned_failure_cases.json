@@ -1,0 +1,59 @@
+[
+  {
+    "id": "ops-test-000",
+    "input": "Need assistance \u2014 warehouse scanners lose wireless connection after roaming. pls check. Impact context: Chennai branch; observation after a browser update. Ref T000.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"ZimTel\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "ZimTel",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-001",
+    "input": "User reports reader needs the approved quarterly patch (typo in earlier ticket). Impact context: legal tenant; observation following maintenance. Ref T001.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"medium\", \"action\": \"install\", \"system\": \"Windows 10\", \"summary\": \"reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "medium",
+      "action": "install",
+      "system": "Windows 10",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-002",
+    "input": "ops note: MFA challenge loop prevents payroll staff from signing in (typo in earlier ticket). Impact context: weekend maintenance; observation during a handoff. Ref T002.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"access control\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "access control",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    }
+  }
+]

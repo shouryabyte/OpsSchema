@@ -1,0 +1,1427 @@
+[
+  {
+    "id": "ops-test-000",
+    "input": "Need assistance \u2014 warehouse scanners lose wireless connection after roaming. pls check. Impact context: Chennai branch; observation after a browser update. Ref T000.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"ZimTel\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "ZimTel",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-001",
+    "input": "User reports reader needs the approved quarterly patch (typo in earlier ticket). Impact context: legal tenant; observation following maintenance. Ref T001.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"medium\", \"action\": \"install\", \"system\": \"Windows 10\", \"summary\": \"reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "medium",
+      "action": "install",
+      "system": "Windows 10",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-002",
+    "input": "ops note: MFA challenge loop prevents payroll staff from signing in (typo in earlier ticket). Impact context: weekend maintenance; observation during a handoff. Ref T002.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"access control\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "access control",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-003",
+    "input": "ops note: controller reports predictive failure on production volume (typo in earlier ticket). Impact context: field team; observation with error code 103. Ref T003.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: field team; observation with error code 103."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"T003\", \"summary\": \"controller reports predictive failure on production volume; impact context: field team; observation with error code 103.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "investigate",
+      "system": "T003",
+      "summary": "controller reports predictive failure on production volume; impact context: field team; observation with error code 103."
+    }
+  },
+  {
+    "id": "ops-test-004",
+    "input": "Heads up, vendor ticket requires management review \u2014 since this morning. Impact context: Chennai branch; observation after a browser update. Ref T004.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"SAP HANA\", \"summary\": \"vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "escalate",
+      "system": "SAP HANA",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-005",
+    "input": "Please help: Mumbai VPN gateway drops all remote sessions. pls check. Impact context: legal tenant; observation following maintenance. Ref T005.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPN\", \"summary\": \"Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-006",
+    "input": "ops note: CI runner token is rejected after rotation. Impact context: weekend maintenance; observation during a handoff. Ref T006.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"CI\", \"summary\": \"CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "CI",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-007",
+    "input": "Please help: new contractor needs read-only opportunity access. Impact context: field team; observation with error code 107. Ref T007.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 107."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"low\", \"action\": \"escalate\", \"system\": \"Salesforce\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: field team; observation with error code 107.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "low",
+      "action": "escalate",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 107."
+    }
+  },
+  {
+    "id": "ops-test-008",
+    "input": "User reports keyboard intermittently repeats characters. pls check. Impact context: Chennai branch; observation after a browser update. Ref T008.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"investigate\", \"system\": \"SAP HANA\", \"summary\": \"keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "investigate",
+      "system": "SAP HANA",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-009",
+    "input": "Heads up, serial number is missing from inventory record. pls check. Impact context: legal tenant; observation following maintenance. Ref T009.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"low\", \"action\": \"reset\", \"system\": \"Inventory\", \"summary\": \"serial number is missing from inventory record; impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "low",
+      "action": "reset",
+      "system": "Inventory",
+      "summary": "serial number is missing from inventory record; impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-010",
+    "input": "ops note: warehouse scanners lose wireless connection after roaming (typo in earlier ticket). Impact context: weekend maintenance; observation during a handoff. Ref T010.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"Wi-Fi\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-011",
+    "input": "ops note: reader needs the approved quarterly patch (typo in earlier ticket). Impact context: field team; observation with error code 111. Ref T011.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: field team; observation with error code 111."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"clarify\", \"system\": \"JIRA\", \"summary\": \"reader needs the approved quarterly patch; impact context: field team; error code 111.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "clarify",
+      "system": "JIRA",
+      "summary": "reader needs the approved quarterly patch; impact context: field team; error code 111."
+    }
+  },
+  {
+    "id": "ops-test-012",
+    "input": "Please help: MFA challenge loop prevents payroll staff from signing in; affects one user. Impact context: Chennai branch; observation after a browser update. Ref T012.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-013",
+    "input": "Heads up, controller reports predictive failure on production volume. Impact context: legal tenant; observation following maintenance. Ref T013.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"SAP HANA\", \"summary\": \"controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "escalate",
+      "system": "SAP HANA",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-014",
+    "input": "ops note: vendor ticket requires management review; affects one user. Impact context: weekend maintenance; observation during a handoff. Ref T014.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"review\", \"system\": \"GitHub\", \"summary\": \"vendor ticket requires management review; impacts one user; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "review",
+      "system": "GitHub",
+      "summary": "vendor ticket requires management review; impacts one user; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-015",
+    "input": "Please help: Mumbai VPN gateway drops all remote sessions \u2014 since this morning. Impact context: field team; observation with error code 115. Ref T015.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 115."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPN\", \"summary\": \"Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 115.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 115."
+    }
+  },
+  {
+    "id": "ops-test-016",
+    "input": "User reports CI runner token is rejected after rotation (typo in earlier ticket). Impact context: Chennai branch; observation after a browser update. Ref T016.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-017",
+    "input": "Ticket: new contractor needs read-only opportunity access; affects one user. Impact context: legal tenant; observation following maintenance. Ref T017.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-018",
+    "input": "Heads up, keyboard intermittently repeats characters \u2014 since this morning. Impact context: weekend maintenance; observation during a handoff. Ref T018.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"check\", \"system\": \"ThinkPad T14\", \"summary\": \"keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "check",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-019",
+    "input": "Need assistance \u2014 serial number is missing from inventory record; affects one user. Impact context: field team; observation with error code 119. Ref T019.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: field team; observation with error code 119."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"check\", \"system\": \"Inventory\", \"summary\": \"serial number is missing from inventory record; Impact context: field team; error code 119.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "check",
+      "system": "Inventory",
+      "summary": "serial number is missing from inventory record; Impact context: field team; error code 119."
+    }
+  },
+  {
+    "id": "ops-test-020",
+    "input": "Need assistance \u2014 warehouse scanners lose wireless connection after roaming. Impact context: Chennai branch; observation after a browser update. Ref T020.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"ZimTel\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "ZimTel",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-021",
+    "input": "ops note: reader needs the approved quarterly patch \u2014 since this morning. Impact context: legal tenant; observation following maintenance. Ref T021.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"medium\", \"action\": \"apply\", \"system\": \"Insight\", \"summary\": \"reader needs the approved quarterly patch; impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "medium",
+      "action": "apply",
+      "system": "Insight",
+      "summary": "reader needs the approved quarterly patch; impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-022",
+    "input": "ops note: MFA challenge loop prevents payroll staff from signing in (typo in earlier ticket). Impact context: weekend maintenance; observation during a handoff. Ref T022.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"access control\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "access control",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-023",
+    "input": "Need assistance \u2014 controller reports predictive failure on production volume. pls check. Impact context: field team; observation with error code 123. Ref T023.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: field team; observation with error code 123."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"SAP HANA\", \"summary\": \"controller reports predictive failure on production volume; impact context: field team; observation with error code 123.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "investigate",
+      "system": "SAP HANA",
+      "summary": "controller reports predictive failure on production volume; impact context: field team; observation with error code 123."
+    }
+  },
+  {
+    "id": "ops-test-024",
+    "input": "Need assistance \u2014 vendor ticket requires management review (typo in earlier ticket). Impact context: Chennai branch; observation after a browser update. Ref T024.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-025",
+    "input": "User reports Mumbai VPN gateway drops all remote sessions. Impact context: legal tenant; observation following maintenance. Ref T025.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPM\", \"summary\": \"Mumbai VPN gateway drops all remote sessions.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPM",
+      "summary": "Mumbai VPN gateway drops all remote sessions."
+    }
+  },
+  {
+    "id": "ops-test-026",
+    "input": "Please help: CI runner token is rejected after rotation (typo in earlier ticket). Impact context: weekend maintenance; observation during a handoff. Ref T026.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"CI\", \"summary\": \"CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "CI",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-027",
+    "input": "User reports new contractor needs read-only opportunity access. pls check. Impact context: field team; observation with error code 127. Ref T027.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 127."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Salesforce\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: field team; observation with error code 127.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 127."
+    }
+  },
+  {
+    "id": "ops-test-028",
+    "input": "User reports keyboard intermittently repeats characters \u2014 since this morning. Impact context: Chennai branch; observation after a browser update. Ref T028.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-029",
+    "input": "Please help: serial number is missing from inventory record (typo in earlier ticket). Impact context: legal tenant; observation following maintenance. Ref T029.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"investigate\", \"system\": \"Inventory\", \"summary\": \"serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "investigate",
+      "system": "Inventory",
+      "summary": "serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-030",
+    "input": "Ticket: warehouse scanners lose wireless connection after roaming. Impact context: weekend maintenance; observation during a handoff. Ref T030.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"Wi-Fi\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-031",
+    "input": "Need assistance \u2014 reader needs the approved quarterly patch (typo in earlier ticket). Impact context: field team; observation with error code 131. Ref T031.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: field team; observation with error code 131."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Field Team\", \"summary\": \"reader needs the approved quarterly patch; impact context: field team; observation with error code 131.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Field Team",
+      "summary": "reader needs the approved quarterly patch; impact context: field team; observation with error code 131."
+    }
+  },
+  {
+    "id": "ops-test-032",
+    "input": "ops note: MFA challenge loop prevents payroll staff from signing in \u2014 since this morning. Impact context: Chennai branch; observation after a browser update. Ref T032.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"access control\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "access control",
+      "priority": "high",
+      "action": "reset",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-033",
+    "input": "Need assistance \u2014 controller reports predictive failure on production volume. Impact context: legal tenant; observation following maintenance. Ref T033.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"SAP HANA instance\", \"summary\": \"controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "escalate",
+      "system": "SAP HANA instance",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-034",
+    "input": "User reports vendor ticket requires management review; affects one user. Impact context: weekend maintenance; observation during a handoff. Ref T034.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"review\", \"system\": \"JIRA\", \"summary\": \"vendor ticket requires management review; impacts one user.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "review",
+      "system": "JIRA",
+      "summary": "vendor ticket requires management review; impacts one user."
+    }
+  },
+  {
+    "id": "ops-test-035",
+    "input": "Ticket: Mumbai VPN gateway drops all remote sessions. pls check. Impact context: field team; observation with error code 135. Ref T035.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 135."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPM\", \"summary\": \"Mumbai VPN gateway drops all remote sessions.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPM",
+      "summary": "Mumbai VPN gateway drops all remote sessions."
+    }
+  },
+  {
+    "id": "ops-test-036",
+    "input": "Please help: CI runner token is rejected after rotation. Impact context: Chennai branch; observation after a browser update. Ref T036.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-037",
+    "input": "Need assistance \u2014 new contractor needs read-only opportunity access; affects one user. Impact context: legal tenant; observation following maintenance. Ref T037.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Salesforce\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-038",
+    "input": "ops note: keyboard intermittently repeats characters \u2014 since this morning. Impact context: weekend maintenance; observation during a handoff. Ref T038.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"check\", \"system\": \"ThinkPad T14\", \"summary\": \"keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "check",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-039",
+    "input": "Need assistance \u2014 serial number is missing from inventory record. pls check. Impact context: field team; observation with error code 139. Ref T039.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: field team; observation with error code 139."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"review\", \"system\": \"inventory\", \"summary\": \"serial number is missing from inventory record; impact context: field team; error code 139.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "review",
+      "system": "inventory",
+      "summary": "serial number is missing from inventory record; impact context: field team; error code 139."
+    }
+  },
+  {
+    "id": "ops-test-040",
+    "input": "Please help: warehouse scanners lose wireless connection after roaming; affects one user. Impact context: Chennai branch; observation after a browser update. Ref T040.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"ZimTel\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "ZimTel",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-041",
+    "input": "User reports reader needs the approved quarterly patch. pls check. Impact context: legal tenant; observation following maintenance. Ref T041.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"medium\", \"action\": \"apply\", \"system\": \"Omnichannel\", \"summary\": \"reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "medium",
+      "action": "apply",
+      "system": "Omnichannel",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-042",
+    "input": "Need assistance \u2014 MFA challenge loop prevents payroll staff from signing in; affects one user. Impact context: weekend maintenance; observation during a handoff. Ref T042.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-043",
+    "input": "Please help: controller reports predictive failure on production volume; affects one user. Impact context: field team; observation with error code 143. Ref T043.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: field team; observation with error code 143."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"controller\", \"summary\": \"user affected; impact context: field team; error code 143.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "investigate",
+      "system": "controller",
+      "summary": "user affected; impact context: field team; error code 143."
+    }
+  },
+  {
+    "id": "ops-test-044",
+    "input": "Heads up, vendor ticket requires management review \u2014 since this morning. Impact context: Chennai branch; observation after a browser update. Ref T044.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"SAP HANA\", \"summary\": \"vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "escalate",
+      "system": "SAP HANA",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-045",
+    "input": "Please help: Mumbai VPN gateway drops all remote sessions \u2014 since this morning. Impact context: legal tenant; observation following maintenance. Ref T045.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPN\", \"summary\": \"Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-046",
+    "input": "Need assistance \u2014 CI runner token is rejected after rotation. Impact context: weekend maintenance; observation during a handoff. Ref T046.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-047",
+    "input": "Ticket: new contractor needs read-only opportunity access \u2014 since this morning. Impact context: field team; observation with error code 147. Ref T047.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 147."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"low\", \"action\": \"escalate\", \"system\": \"Salesforce\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: field team; observation with error code 147.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "low",
+      "action": "escalate",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 147."
+    }
+  },
+  {
+    "id": "ops-test-048",
+    "input": "Please help: keyboard intermittently repeats characters (typo in earlier ticket). Impact context: Chennai branch; observation after a browser update. Ref T048.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-049",
+    "input": "Please help: serial number is missing from inventory record (typo in earlier ticket). Impact context: legal tenant; observation following maintenance. Ref T049.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"medium\", \"action\": \"investigate\", \"system\": \"Inventory\", \"summary\": \"serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "investigate",
+      "system": "Inventory",
+      "summary": "serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-050",
+    "input": "Need assistance \u2014 warehouse scanners lose wireless connection after roaming. Impact context: weekend maintenance; observation during a handoff. Ref T050.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"Wi-Fi\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-051",
+    "input": "User reports reader needs the approved quarterly patch \u2014 since this morning. Impact context: field team; observation with error code 151. Ref T051.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: field team; observation with error code 151."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"apply\", \"system\": \"Zapier\", \"summary\": \"reader needs the approved quarterly patch; impact context: field team; error code 151.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "apply",
+      "system": "Zapier",
+      "summary": "reader needs the approved quarterly patch; impact context: field team; error code 151."
+    }
+  },
+  {
+    "id": "ops-test-052",
+    "input": "User reports MFA challenge loop prevents payroll staff from signing in. pls check. Impact context: Chennai branch; observation after a browser update. Ref T052.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-053",
+    "input": "Please help: controller reports predictive failure on production volume; affects one user. Impact context: legal tenant; observation following maintenance. Ref T053.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"investigate\", \"system\": \"controller\", \"summary\": \"controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "investigate",
+      "system": "controller",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-054",
+    "input": "User reports vendor ticket requires management review; affects one user. Impact context: weekend maintenance; observation during a handoff. Ref T054.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"JIRA\", \"summary\": \"vendor ticket requires management review; impacts one user.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "JIRA",
+      "summary": "vendor ticket requires management review; impacts one user."
+    }
+  },
+  {
+    "id": "ops-test-055",
+    "input": "ops note: Mumbai VPN gateway drops all remote sessions. pls check. Impact context: field team; observation with error code 155. Ref T055.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 155."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPN\", \"summary\": \"Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 155.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: field team; observation with error code 155."
+    }
+  },
+  {
+    "id": "ops-test-056",
+    "input": "User reports CI runner token is rejected after rotation; affects one user. Impact context: Chennai branch; observation after a browser update. Ref T056.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "CI runner token is rejected after rotation; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-057",
+    "input": "User reports new contractor needs read-only opportunity access. pls check. Impact context: legal tenant; observation following maintenance. Ref T057.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "new contractor needs read-only opportunity access; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-058",
+    "input": "Need assistance \u2014 keyboard intermittently repeats characters. pls check. Impact context: weekend maintenance; observation during a handoff. Ref T058.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"check\", \"system\": \"keyboard\", \"summary\": \"keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "check",
+      "system": "keyboard",
+      "summary": "keyboard intermittently repeats characters; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-059",
+    "input": "Need assistance \u2014 serial number is missing from inventory record \u2014 since this morning. Impact context: field team; observation with error code 159. Ref T059.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: field team; observation with error code 159."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"low\", \"action\": \"reset\", \"system\": \"Inventory\", \"summary\": \"serial number is missing from inventory record; impact context: field team; error code 159.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "low",
+      "action": "reset",
+      "system": "Inventory",
+      "summary": "serial number is missing from inventory record; impact context: field team; error code 159."
+    }
+  },
+  {
+    "id": "ops-test-060",
+    "input": "ops note: warehouse scanners lose wireless connection after roaming. pls check. Impact context: Chennai branch; observation after a browser update. Ref T060.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"Wi-Fi\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-061",
+    "input": "User reports reader needs the approved quarterly patch. pls check. Impact context: legal tenant; observation following maintenance. Ref T061.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"medium\", \"action\": \"install\", \"system\": \"Windows 10\", \"summary\": \"reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "medium",
+      "action": "install",
+      "system": "Windows 10",
+      "summary": "reader needs the approved quarterly patch; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-062",
+    "input": "Need assistance \u2014 MFA challenge loop prevents payroll staff from signing in \u2014 since this morning. Impact context: weekend maintenance; observation during a handoff. Ref T062.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"access control\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "access control",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-063",
+    "input": "Need assistance \u2014 controller reports predictive failure on production volume (typo in earlier ticket). Impact context: field team; observation with error code 163. Ref T063.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: field team; observation with error code 163."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"SAP HANA\", \"summary\": \"controller reports predictive failure on production volume; impact context: field team; observation with error code 163.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "escalate",
+      "system": "SAP HANA",
+      "summary": "controller reports predictive failure on production volume; impact context: field team; observation with error code 163."
+    }
+  },
+  {
+    "id": "ops-test-064",
+    "input": "Ticket: vendor ticket requires management review. pls check. Impact context: Chennai branch; observation after a browser update. Ref T064.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"vendor ticket requires management review;Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "vendor ticket requires management review;Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-065",
+    "input": "Heads up, Mumbai VPN gateway drops all remote sessions (typo in earlier ticket). Impact context: legal tenant; observation following maintenance. Ref T065.",
+    "expected": {
+      "category": "network",
+      "priority": "critical",
+      "action": "investigate",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"VPN\", \"summary\": \"Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "VPN",
+      "summary": "Mumbai VPN gateway drops all remote sessions; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-066",
+    "input": "User reports CI runner token is rejected after rotation. Impact context: weekend maintenance; observation during a handoff. Ref T066.",
+    "expected": {
+      "category": "software",
+      "priority": "high",
+      "action": "reset",
+      "system": "GitLab",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"Jira\", \"summary\": \"CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "high",
+      "action": "escalate",
+      "system": "Jira",
+      "summary": "CI runner token is rejected after rotation; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-067",
+    "input": "Need assistance \u2014 new contractor needs read-only opportunity access \u2014 since this morning. Impact context: field team; observation with error code 167. Ref T067.",
+    "expected": {
+      "category": "access",
+      "priority": "medium",
+      "action": "create",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 167."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"low\", \"action\": \"escalate\", \"system\": \"Salesforce\", \"summary\": \"new contractor needs read-only opportunity access; Impact context: field team; observation with error code 167.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "low",
+      "action": "escalate",
+      "system": "Salesforce",
+      "summary": "new contractor needs read-only opportunity access; Impact context: field team; observation with error code 167."
+    }
+  },
+  {
+    "id": "ops-test-068",
+    "input": "ops note: keyboard intermittently repeats characters; affects one user. Impact context: Chennai branch; observation after a browser update. Ref T068.",
+    "expected": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "create",
+      "system": "ThinkPad T14",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"medium\", \"action\": \"reset\", \"system\": \"Microsoft Windows\", \"summary\": \"keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "medium",
+      "action": "reset",
+      "system": "Microsoft Windows",
+      "summary": "keyboard intermittently repeats characters; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-069",
+    "input": "ops note: serial number is missing from inventory record. pls check. Impact context: legal tenant; observation following maintenance. Ref T069.",
+    "expected": {
+      "category": "other",
+      "priority": "low",
+      "action": "investigate",
+      "system": "Asset inventory",
+      "summary": "serial number is missing from inventory record; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"medium\", \"action\": \"reset\", \"system\": \"Inventory\", \"summary\": \"serial number is missing from inventory record; impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "medium",
+      "action": "reset",
+      "system": "Inventory",
+      "summary": "serial number is missing from inventory record; impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-070",
+    "input": "User reports warehouse scanners lose wireless connection after roaming. Impact context: weekend maintenance; observation during a handoff. Ref T070.",
+    "expected": {
+      "category": "network",
+      "priority": "high",
+      "action": "investigate",
+      "system": "Wi-Fi",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"network\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"Zimbra\", \"summary\": \"warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "network",
+      "priority": "high",
+      "action": "reset",
+      "system": "Zimbra",
+      "summary": "warehouse scanners lose wireless connection after roaming; Impact context: weekend maintenance; observation during a handoff."
+    }
+  },
+  {
+    "id": "ops-test-071",
+    "input": "Ticket: reader needs the approved quarterly patch \u2014 since this morning. Impact context: field team; observation with error code 171. Ref T071.",
+    "expected": {
+      "category": "software",
+      "priority": "low",
+      "action": "update",
+      "system": "Adobe Acrobat",
+      "summary": "reader needs the approved quarterly patch; Impact context: field team; observation with error code 171."
+    },
+    "output": "{\"category\": \"software\", \"priority\": \"medium\", \"action\": \"apply\", \"system\": \"MyISAM\", \"summary\": \"reader needs the approved quarterly patch; Impact context: field team; observation with error code 171.\"}",
+    "parsed": {
+      "category": "software",
+      "priority": "medium",
+      "action": "apply",
+      "system": "MyISAM",
+      "summary": "reader needs the approved quarterly patch; Impact context: field team; observation with error code 171."
+    }
+  },
+  {
+    "id": "ops-test-072",
+    "input": "Please help: MFA challenge loop prevents payroll staff from signing in. pls check. Impact context: Chennai branch; observation after a browser update. Ref T072.",
+    "expected": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Okta",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    },
+    "output": "{\"category\": \"access\", \"priority\": \"high\", \"action\": \"reset\", \"system\": \"Microsoft 365\", \"summary\": \"MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update.\"}",
+    "parsed": {
+      "category": "access",
+      "priority": "high",
+      "action": "reset",
+      "system": "Microsoft 365",
+      "summary": "MFA challenge loop prevents payroll staff from signing in; Impact context: Chennai branch; observation after a browser update."
+    }
+  },
+  {
+    "id": "ops-test-073",
+    "input": "ops note: controller reports predictive failure on production volume (typo in earlier ticket). Impact context: legal tenant; observation following maintenance. Ref T073.",
+    "expected": {
+      "category": "hardware",
+      "priority": "critical",
+      "action": "escalate",
+      "system": "SAN array",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    },
+    "output": "{\"category\": \"hardware\", \"priority\": \"high\", \"action\": \"escalate\", \"system\": \"T100\", \"summary\": \"controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance.\"}",
+    "parsed": {
+      "category": "hardware",
+      "priority": "high",
+      "action": "escalate",
+      "system": "T100",
+      "summary": "controller reports predictive failure on production volume; Impact context: legal tenant; observation following maintenance."
+    }
+  },
+  {
+    "id": "ops-test-074",
+    "input": "ops note: vendor ticket requires management review. pls check. Impact context: weekend maintenance; observation during a handoff. Ref T074.",
+    "expected": {
+      "category": "other",
+      "priority": "medium",
+      "action": "escalate",
+      "system": "Service desk",
+      "summary": "vendor ticket requires management review; Impact context: weekend maintenance; observation during a handoff."
+    },
+    "output": "{\"category\": \"other\", \"priority\": \"high\", \"action\": \"review\", \"system\": \"Insight\", \"summary\": \"vendor ticket requires management review; impact context: weekend maintenance; observation during a handoff.\"}",
+    "parsed": {
+      "category": "other",
+      "priority": "high",
+      "action": "review",
+      "system": "Insight",
+      "summary": "vendor ticket requires management review; impact context: weekend maintenance; observation during a handoff."
+    }
+  }
+]

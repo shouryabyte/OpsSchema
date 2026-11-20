@@ -1,0 +1,23 @@
+{
+  "test_count": 75,
+  "base": {
+    "n": 75,
+    "json_validity": 0.3333333333333333,
+    "category_accuracy": 0.0,
+    "priority_accuracy": 0.02666666666666667,
+    "action_accuracy": 0.0,
+    "controlled_exact": 0.0
+  },
+  "finetuned": {
+    "n": 75,
+    "json_validity": 1.0,
+    "category_accuracy": 0.7866666666666666,
+    "priority_accuracy": 0.5466666666666666,
+    "action_accuracy": 0.22666666666666666,
+    "controlled_exact": 0.10666666666666667
+  },
+  "decoding": {
+    "do_sample": false,
+    "max_new_tokens": 128
+  }
+}
