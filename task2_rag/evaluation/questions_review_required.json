@@ -1,0 +1,1 @@
+{"status":"PENDING_HUMAN_REVIEW","instructions":"Create 15 independently reviewed items only after downloading the pinned official PDF. Each item requires id, question, exact_gold_passage, page, source_id. Do not score until all fields are verified in the local PDF.","questions":[]}

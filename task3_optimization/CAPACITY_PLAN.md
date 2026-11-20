@@ -1,0 +1,5 @@
+# 20-user / 24 GB GPU capacity estimate — Qwen 0.5B
+
+This is a design estimate, not evidence from the local CPU environment. Assume 0.5B Q4 weights: `0.5e9×0.5 ≈ 0.25 GB`, plus ~0.05 GB quant metadata and 1.5 GB runtime/workspace headroom. For a representative 24-layer configuration with 2 KV heads, head dimension 64, fp16 KV cache, and 2,048 live tokens, one sequence costs `2×24×2×64×2×2048 = 12,582,912 bytes ≈ 0.012 GB`; 20 live sequences are ~0.25 GB. Confirm exact layers/KV-heads/head-dim from the downloaded model config before deployment.
+
+Budgeting 4 GB for batching/activations and 6 GB safety headroom gives approximately 12 GB total, so 20 connected users is plausible under these assumptions. Connected users are not necessarily 20 simultaneous decoding streams: use continuous batching, stream tokens, queue bursts, cap context/output lengths and apply admission control. CPU speed does not predict 24-GB-GPU throughput; bind capacity to real GPU benchmark output after measuring Q4/Q8 tokens/s.

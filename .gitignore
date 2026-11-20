@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+INTERVIEW_GUIDE.md
+task2_rag/documents/*.pdf
+task1_finetuning/results/checkpoints/
+task3_optimization/benchmarks/*.gguf
+*.log

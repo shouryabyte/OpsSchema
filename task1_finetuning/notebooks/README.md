@@ -1,0 +1,1 @@
+Colab workflow: upload repository, `!pip install -r requirements.txt`, run data generation, inspect Qwen config to confirm `q_proj,v_proj`, train with PEFT `SFTTrainer`, save adapter and raw generations, then run the shared held-out evaluator for base and adapter.
