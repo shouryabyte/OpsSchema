@@ -1,6 +1,6 @@
 """Generate and score base versus LoRA-adapter outputs on untouched test.jsonl."""
 from __future__ import annotations
-import argparse, gc, json
+import argparse, gc, json, shutil
 from pathlib import Path
 from typing import Any
 
@@ -17,7 +17,23 @@ def load_rows() -> list[dict[str, Any]]:
 def generate(model_id: str, adapter: str | None, rows: list[dict[str, Any]]) -> list[str]:
     import torch
     from peft import PeftModel
-    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
+    from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig, StoppingCriteria, StoppingCriteriaList
+
+    class JsonObjectStop(StoppingCriteria):
+        """Stop immediately once the first complete JSON object has been generated."""
+        def __init__(self, prompt_tokens: int) -> None:
+            self.prompt_tokens = prompt_tokens
+
+        def __call__(self, input_ids: Any, scores: Any, **kwargs: Any) -> bool:
+            text = tokenizer.decode(input_ids[0][self.prompt_tokens:], skip_special_tokens=True)
+            start = text.find("{")
+            if start < 0:
+                return False
+            try:
+                json.JSONDecoder().raw_decode(text[start:])
+                return True
+            except json.JSONDecodeError:
+                return False
 
     tokenizer = AutoTokenizer.from_pretrained(adapter or model_id)
     tokenizer.pad_token = tokenizer.eos_token
@@ -30,7 +46,8 @@ def generate(model_id: str, adapter: str | None, rows: list[dict[str, Any]]) -> 
     for row in rows:
         encoded = tokenizer(prompt(row["request"]), return_tensors="pt").to(model.device)
         with torch.inference_mode():
-            generated = model.generate(**encoded, max_new_tokens=128, do_sample=False, pad_token_id=tokenizer.eos_token_id, eos_token_id=tokenizer.eos_token_id)
+            stop = StoppingCriteriaList([JsonObjectStop(encoded["input_ids"].shape[1])])
+            generated = model.generate(**encoded, max_new_tokens=128, do_sample=False, pad_token_id=tokenizer.eos_token_id, eos_token_id=tokenizer.eos_token_id, stopping_criteria=stop)
         outputs.append(tokenizer.decode(generated[0][encoded["input_ids"].shape[1]:], skip_special_tokens=True).strip())
     del model
     gc.collect()
@@ -46,6 +63,7 @@ def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--model-id", default="Qwen/Qwen2.5-0.5B-Instruct")
     parser.add_argument("--adapter", default=str(ROOT / "results" / "adapter"))
+    parser.add_argument("--regenerate", action="store_true", help="Regenerate base and adapter outputs with the JSON stop rule.")
     args = parser.parse_args()
     rows = load_rows()
     if len(rows) < 50:
@@ -54,12 +72,15 @@ def main() -> None:
         raise SystemExit(f"Adapter not found: {args.adapter}. Copy the real Task 1 results folder first.")
     out = ROOT / "results"
     base_file, tuned_file = out / "base_predictions.json", out / "finetuned_predictions.json"
-    if base_file.exists() and tuned_file.exists():
+    if base_file.exists() and tuned_file.exists() and not args.regenerate:
         base_records = json.loads(base_file.read_text(encoding="utf-8"))
         tuned_records = json.loads(tuned_file.read_text(encoding="utf-8"))
         base, tuned = [x["output"] for x in base_records], [x["output"] for x in tuned_records]
         print("Reusing existing raw generations; scoring only.")
     else:
+        if args.regenerate:
+            shutil.copy2(base_file, out / "initial_no_stop_base_predictions.json") if base_file.exists() else None
+            shutil.copy2(tuned_file, out / "initial_no_stop_finetuned_predictions.json") if tuned_file.exists() else None
         base = generate(args.model_id, None, rows)
         tuned = generate(args.model_id, args.adapter, rows)
         base_records, tuned_records = records(rows, base), records(rows, tuned)
