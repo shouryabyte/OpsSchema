@@ -5,5 +5,6 @@ __pycache__/
 INTERVIEW_GUIDE.md
 task2_rag/documents/*.pdf
 task1_finetuning/results/checkpoints/
+task1_finetuning/results/adapter/
 task3_optimization/benchmarks/*.gguf
 *.log
