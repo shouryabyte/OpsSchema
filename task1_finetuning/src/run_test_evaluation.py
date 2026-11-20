@@ -53,11 +53,18 @@ def main() -> None:
     if not Path(args.adapter).exists():
         raise SystemExit(f"Adapter not found: {args.adapter}. Copy the real Task 1 results folder first.")
     out = ROOT / "results"
-    base = generate(args.model_id, None, rows)
-    tuned = generate(args.model_id, args.adapter, rows)
-    base_records, tuned_records = records(rows, base), records(rows, tuned)
-    (out / "base_predictions.json").write_text(json.dumps(base_records, indent=2), encoding="utf-8")
-    (out / "finetuned_predictions.json").write_text(json.dumps(tuned_records, indent=2), encoding="utf-8")
+    base_file, tuned_file = out / "base_predictions.json", out / "finetuned_predictions.json"
+    if base_file.exists() and tuned_file.exists():
+        base_records = json.loads(base_file.read_text(encoding="utf-8"))
+        tuned_records = json.loads(tuned_file.read_text(encoding="utf-8"))
+        base, tuned = [x["output"] for x in base_records], [x["output"] for x in tuned_records]
+        print("Reusing existing raw generations; scoring only.")
+    else:
+        base = generate(args.model_id, None, rows)
+        tuned = generate(args.model_id, args.adapter, rows)
+        base_records, tuned_records = records(rows, base), records(rows, tuned)
+        base_file.write_text(json.dumps(base_records, indent=2), encoding="utf-8")
+        tuned_file.write_text(json.dumps(tuned_records, indent=2), encoding="utf-8")
     metric = {"test_count": len(rows), "base": score(rows, base), "finetuned": score(rows, tuned), "decoding": {"do_sample": False, "max_new_tokens": 128}}
     (out / "test_metrics.json").write_text(json.dumps(metric, indent=2), encoding="utf-8")
     failures = [x for x in tuned_records if x["parsed"] is None or any(x["parsed"][key] != x["expected"][key] for key in ("category", "priority", "action"))]
