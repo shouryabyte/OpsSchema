@@ -3,7 +3,7 @@ import argparse,inspect,json
 from pathlib import Path
 def prompt(x): return 'Extract exactly JSON keys category, priority, action, system, summary.\nRequest: '+x+'\nJSON:'
 def main():
- a=argparse.ArgumentParser();a.add_argument('--config',default='../configs/train.json');a.add_argument('--cpu-smoke',action='store_true');z=a.parse_args();c=json.loads(Path(z.config).read_text());out=Path('../results');out.mkdir(exist_ok=True)
+ a=argparse.ArgumentParser();a.add_argument('--config',default='configs/train.json');a.add_argument('--cpu-smoke',action='store_true');z=a.parse_args();c=json.loads(Path(z.config).read_text());out=Path('results');out.mkdir(exist_ok=True)
  if z.cpu_smoke:
   from transformers import AutoTokenizer
   (out/'run_environment.json').write_text(json.dumps({'status':'CPU_PIPELINE_VALIDATION_ONLY','tokens':len(AutoTokenizer.from_pretrained('hf-internal-testing/tiny-random-gpt2')(prompt('VPN outage'))['input_ids']),'config':c},indent=2));return
